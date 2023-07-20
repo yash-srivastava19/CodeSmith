@@ -1,0 +1,739 @@
+"Find the sum of all the natural numbers below 1000 that are multiples of 3 or 5."; " Here is an example of how to find the solution to the given problem in Python:
+```
+def compute():
+	ans = sum(x for x in range(1000) if (x % 3 == 0 or x % 5 == 0))
+	return str(ans)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"Find the sum of all the even-valued terms in the Fibonacci sequence which do not exceed one million."; " Here is an example of how to find the solution to the given problem in Python:
+```
+def compute():
+	ans = 0
+	x = 1  # Represents the current Fibonacci number being processed
+	y = 2  # Represents the next Fibonacci number in the sequence
+	while x <= 4000000:
+		if x % 2 == 0:
+			ans += x
+		x, y = y, x + y
+	return str(ans)
+
+print(compute)
+```
+This code defines a function called `compute` which solves the problem."
+;"Find the largest prime factor of 317584931803"; " Here is an example of how to find the solution to the given problem in Python:
+```
+def sqrt(x: int) -> int:
+	assert x >= 0
+	i: int = 1
+	while i * i <= x:
+		i *= 2
+	y: int = 0
+	while i > 0:
+		if (y + i)**2 <= x:
+			y += i
+		i //= 2
+return y
+
+def compute():
+	n = 600851475143
+	while True:
+		p = smallest_prime_factor(n)
+		if p < n:
+			n //= p
+		else:
+			return str(n)
+
+# Returns the smallest factor of n, which is in the range [2, n]. The result is always prime.
+
+def smallest_prime_factor(n):
+	assert n >= 2
+	for i in range(2, sqrt(n) + 1):
+		if n % i == 0:
+			return i
+	return n  # n itself is prime
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"Find the largest palindrome made from the product of two 3-digit numbers."; " Here is an example of how to find the solution to the given problem in Python:
+```
+def compute():
+	ans = max(i * j for i in range(100, 1000) for j in range(100, 1000) if str(i * j) == str(i * j)[ : : -1])
+	return str(ans)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?"; " Here is an example of how to find the solution to the given problem in Python:
+```
+import math
+
+def compute():
+	ans = 1
+	for i in range(1, 21):
+		ans *= i // math.gcd(i, ans)
+	return str(ans)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum."; " Here is an example of how to find the solution to the given problem in Python:
+```
+def compute():
+	N = 100
+	s = sum(i for i in range(1, N + 1))
+	s2 = sum(i**2 for i in range(1, N + 1))
+	return str(s**2 - s2)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?";  "Here is an example of how to find the solution to the given problem in Python:
+```
+NUMBER = '7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450'
+ADJACENT = 13
+
+def digit_product(s):
+	result = 1
+	for c in s:
+		result *= int(c)
+	return result
+
+def compute():
+	ans = max(digit_product(NUMBER[i : i + ADJACENT]) for i in range(len(NUMBER) - ADJACENT + 1))
+	return str(ans)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"There exists exactly one Pythagorean triplet for which a+b+c = 1000. Find the product a*b*c"; " Here is an example of how to find the solution to the given problem in Python:
+```
+def compute():
+	PERIMETER = 1000
+	for a in range(1, PERIMETER + 1):
+		for b in range(a + 1, PERIMETER + 1):
+			c = PERIMETER - a - b
+			if a * a + b * b == c * c:
+			# It is now implied that b < c, because we have a > 0
+				return str(a * b * c)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"What is the sum of the digits of the number 2 to the power 100?"; " Here is an example of how to find the solution to the given problem in Python:
+```
+	def compute():
+	n = 2**1000
+	ans = sum(int(c) for c in str(n))
+	return str(ans)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, how many letters would be used?"; " Here is an example of how to find the solution to the given problem in Python:
+```
+ONES = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine','ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
+TENS = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
+
+def to_english(n):
+if 0 <= n < 20:
+	return ONES[n]
+elif 20 <= n < 100:
+	return TENS[n // 10] + (ONES[n % 10] if (n % 10 != 0) else '')
+elif 100 <= n < 1000:
+	return ONES[n // 100] + 'hundred' + (('and' + to_english(n % 100)) if (n % 100 != 0) else '')
+elif 1000 <= n < 1000000:
+	return to_english(n // 1000) + 'thousand' + (to_english(n % 1000) if (n % 1000 != 0) else '')
+else:
+	raise ValueError()
+
+def compute():
+	ans = sum(len(to_english(i)) for i in range(1, 1001))
+	return str(ans)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"Find the sum of the digits in the number hundred factorial"; " Here is an example of how to find the solution to the given problem in Python:
+```
+import math
+
+	def compute():
+	n = math.factorial(100)
+	ans = sum(int(c) for c in str(n))
+	return str(ans)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"Evaluate the sum of all the amicable numbers under 10000"; " Here is an example of how to find the solution to the given problem in Python:
+```
+def compute():
+	# Compute sum of proper divisors for each number
+	divisorsum = [0] * 10000
+	for i in range(1, len(divisorsum)):
+		for j in range(i * 2, len(divisorsum), i):
+			divisorsum[j] += i
+	# Find all amicable pairs within range
+	ans = 0
+	for i in range(1, len(divisorsum)):
+		j = divisorsum[i]
+		if j != i and j < len(divisorsum) and divisorsum[j] == i:
+		ans += i
+	return str(ans)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"What is the sum of the numbers on the diagonals in a 1001 by 1001 ulam spiral ?"; " Here is an example of how to find the solution to the given problem in Python:
+```
+def compute():
+	SIZE = 1001  # Must be odd
+	ans = 1  # Special case for size 1
+	ans += sum(4 * i * i - 6 * (i - 1) for i in range(3, SIZE + 1, 2))
+	return str(ans)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"Find the sum of all the numbers that can be written as the sum of fifth powers of their digits"; " Here is an example of how to find the solution to the given problem in Python:
+```
+def compute():
+	# As stated in the problem, 1 = 1^5 is excluded.
+	# If a number has at least n >= 7 digits, then even if every digit is 9,
+	# n * 9^5 is still less than the number (which is at least 10^n).
+	ans = sum(i for i in range(2, 1000000) if i == fifth_power_digit_sum(i))
+	return str(ans)
+
+def fifth_power_digit_sum(n):
+	return sum(int(c)**5 for c in str(n))
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"Find the sum of all numbers which are equal to the sum of the factorial of their digits."; " Here is an example of how to find the solution to the given problem in Python:
+```
+import math
+
+FACTORIAL_DIGITS_SUM_WITHOUT_LEADING_ZEROS = [sum(math.factorial(int(c)) for c in str(i)) for i in range(10000)]
+FACTORIAL_DIGITS_SUM_WITH_LEADING_ZEROS = [sum(math.factorial(int(c)) for c in str(i).zfill(4)) for i in range(10000)]
+
+def compute():
+	# As stated in the problem, 1 = 1! and 2 = 2! are excluded.
+	# If a number has at least n >= 8 digits, then even if every digit is 9,
+	# n * 9! is still less than the number (which is at least 10^n).
+	ans = sum(i for i in range(3, 10000000) if i == factorial_digit_sum(i))
+	return str(ans)
+
+
+def factorial_digit_sum(n):
+	result = 0
+	while n >= 10000:
+		result += FACTORIAL_DIGITS_SUM_WITH_LEADING_ZEROS[n % 10000]
+		n //= 10000
+	return result + FACTORIAL_DIGITS_SUM_WITHOUT_LEADING_ZEROS[n]
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"Find the sum of all numbers, less than one million, which are palindromic in base 10 and base 2"; " Here is an example of how to find the solution to the given problem in Python:
+```
+def compute():
+	ans = sum(i for i in range(1000000) if is_decimal_binary_palindrome(i))
+	return str(ans)
+
+
+def is_decimal_binary_palindrome(n):
+	s = str(n)
+	if s != s[ : : -1]:
+		return False
+	t = bin(n)[2 : ]
+	return t == t[ : : -1]
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"Find the smallest positive integer,n , such that 2n, 3n, 4n, 5n, and 6n, contain the same digits"; " Here is an example of how to find the solution to the given problem in Python:
+```
+import itertools
+
+
+def compute():
+	cond = lambda i: all(sorted(str(i)) == sorted(str(j * i)) for j in range(2, 7))
+	ans = next(i for i in itertools.count(1) if cond(i))
+	return str(ans)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"How many Lychrel numbers are there below ten-thousand?"; " Here is an example of how to find the solution to the given problem in Python:
+```
+def compute():
+	ans = sum(1 for i in range(10000) if is_lychrel(i))
+	return str(ans)
+
+
+def is_lychrel(n):
+	for i in range(50):
+		n += int(str(n)[ : : -1])
+		if str(n) == str(n)[ : : -1]:
+			return False
+	return True
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"Find the smallest cube for which exactly five permutations of its digits are cube."; " Here is an example of how to find the solution to the given problem in Python:
+```
+import itertools
+
+def compute():
+	numdigits = 0
+	data = {}  # str numclass -> (int lowest, int count)
+	for i in itertools.count():
+		digits = [int(c) for c in str(i**3)]
+		digits.sort()
+		numclass = ''.join(str(d) for d in digits)
+		
+		if len(numclass) > numdigits:
+			# Process and flush data for smaller number of digits
+			 candidates = [lowest for (lowest, count) in data.values() if count == 5]
+			if len(candidates) > 0:
+				return str(min(candidates)**3)
+			data = {}
+			numdigits = len(numclass)
+		
+		lowest, count = data.get(numclass, (i, 0))
+		data[numclass] = (lowest, count + 1)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"How many n-digit positive integers exist which are also an n-th power?"; " Here is an example of how to find the solution to the given problem in Python:
+```
+def compute():
+	ans = sum(1
+		for i in range(1, 10)
+		for j in range(1, 22)
+		if len(str(i**j)) == j)
+	return str(ans)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"Find the sum of digits in the numerator of the 100th convergent of the continued fraction for e"; " Here is an example of how to find the solution to the given problem in Python:
+```
+def compute():
+	numer = 1
+	denom = 0
+	for i in reversed(range(100)):
+		numer, denom = e_contfrac_term(i) * numer + denom, numer
+	ans = sum(int(c) for c in str(numer))
+	return str(ans)
+
+
+def e_contfrac_term(i):
+	if i == 0:
+		return 2
+	elif i % 3 == 2:
+		return i // 3 * 2 + 2
+	else:
+		return 1
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"How many different ways can one hundred be written as a sum of at least two positive integers?"; " Here is an example of how to find the solution to the given problem in Python:
+```
+def compute():
+	LIMIT = 100
+	partitions = []
+	for i in range(LIMIT + 1):
+		partitions.append([None] * (LIMIT + 1))
+		for j in reversed(range(LIMIT + 1)):
+			if j == i:
+				val = 1
+			elif j > i:
+					val = 0
+			elif j == 0:
+				val = partitions[i][j + 1]
+			else:
+				val = partitions[i][j + 1] + partitions[i - j][j]
+			partitions[i][j] = val
+	
+	ans = partitions[LIMIT][1] - 1
+	return str(ans)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"Find the least value of n for which partition of n is divisible by one million."; " Here is an example of how to find the solution to the given problem in Python:
+```
+import itertools
+
+MODULUS = 10**6
+
+def compute():
+	partitions = [1]
+	for i in itertools.count(len(partitions)):
+		item = 0
+		for j in itertools.count(1):
+			sign = -1 if j % 2 == 0 else +1
+			index = (j * j * 3 - j) // 2
+			if index > i:
+				break
+			item += partitions[i - index] * sign
+			index += j  # index == (j * j * 3 + j) // 2
+			if index > i:
+				break
+			item += partitions[i - index] * sign
+			item %= MODULUS
+
+		# Check or memoize the number
+		if item == 0:
+			return str(i)
+		partitions.append(item)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"How many starting numbers in the number chain (formed by  continuously adding the square of the digits in a number to form a new number until it has been seen before) below ten million will arrive at 89?"; " Here is an example of how to find the solution to the given problem in Python:
+```
+def  compute():
+	ans = sum(1
+		for i in range(1, 10000000)
+		if get_terminal(i) == 89)
+	return str(ans)
+
+
+TERMINALS = (1, 89)
+
+def get_terminal(n):
+	while n not in TERMINALS:
+		n = square_digit_sum(n)
+	return n
+
+
+def square_digit_sum(n):
+	result = 0
+	while n > 0:
+		result += SQUARE_DIGITS_SUM[n % 1000]
+		n //= 1000
+	return result
+
+SQUARE_DIGITS_SUM = [sum(int(c)**2 for c in str(i)) for i in range(1000)]
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"Find the smallest member of the longest amicable chain with no element exceeding one million."; " Here is an example of how to find the solution to the given problem in Python:
+```
+import itertools
+
+def compute():
+	LIMIT = 10**6
+
+	# divisorsum[n] is the sum of all the proper divisors of n
+	divisorsum = [0] * (LIMIT + 1)
+	for i in range(1, LIMIT + 1):
+		for j in range(i * 2, LIMIT + 1, i):
+			divisorsum[j] += i
+
+	# Analyze the amicable chain length for each number in ascending order
+	maxchainlen = 0
+	ans = -1
+	for i in range(LIMIT + 1):
+		visited = set()
+		cur = i
+		for count in itertools.count(1):
+			# 'count' is the length of the this amicable chain
+			visited.add(cur)
+			next = divisorsum[cur]
+			if next == i:
+				if count > maxchainlen:
+					ans = i
+					maxchainlen = count
+				break
+			# Exceeds limit or not a chain (a rho shape instead)
+			elif next > LIMIT or next in visited:
+				break
+			else:
+				cur = next
+
+	return str(ans)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"Find the index of the first Fibonacci number for which the first nine digits AND the last nine digits are pandigital"; " Here is an example of how to find the solution to the given problem in Python:
+```
+import itertools
+
+def compute():
+	MOD = 10**9
+	a = 0
+	b = 1
+	for i in itertools.count():
+		# Loop invariants: a == fib(i) % MOD, b == fib(i+1) % MOD
+		if ''.join(sorted(str(a))) == '123456789':  # If suffix is pandigital
+			f = fibonacci(i)[0]
+			if ''.join(sorted(str(f)[ : 9])) == '123456789':  # If prefix is pandigital
+				return str(i)
+		a, b = b, (a + b) % MOD
+	return str(ans)
+
+
+# Returns the tuple (F(n), F(n+1)), computed by the fast doubling method.
+def fibonacci(n):
+	if n == 0:
+		return (0, 1)
+	else:
+		a, b = fibonacci(n // 2)
+		c = a * (b * 2 - a)
+		d = a * a + b * b
+		if n % 2 == 0:
+			return (c, d)
+		else:
+			return (d, c + d)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"How many distinct ways can a player checkout with a score less than 100 in a game of darts?"; " Here is an example of how to find the solution to the given problem in Python:
+```
+def compute():
+	# Both lists are orderless but duplicates are important, they are sort of like multisets
+	points = [i * j for i in range(1, 21) for j in range(1, 4)] + [25, 50]
+	doublepoints = [i * 2 for i in range(1, 21)] + [25 * 2]
+
+	# Memoization array, with dimensions (3, 101, len(points))
+	ways = [[[None] * len(points) for j in range(101)] for i in range(3)]
+
+	# Number of ways to get exactly 'total' points in exactly 'throwz' throws, using
+	# items (unordered) from the 'points' list with index less than or equal to 'maxIndex'.
+	def calc_ways(throws, total, maxindex):
+		if ways[throws][total][maxindex] is None:
+			if throws == 0:
+				result = 1 if total == 0 else 0
+			else:
+				result = 0
+				if maxindex > 0:
+					result += calc_ways(throws, total, maxindex - 1)
+				if points[maxindex] <= total:
+					result += calc_ways(throws - 1, total - points[maxindex], maxindex)
+			ways[throws][total][maxindex] = result
+		return ways[throws][total][maxindex]
+
+	checkouts = 0
+	for remainingpoints in range(1, 100):
+		for throws in range(3):
+			for p in doublepoints:
+				if p <= remainingpoints:
+					checkouts += calc_ways(throws, remainingpoints - p, len(points) - 1)
+	return str(checkouts)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"Find the least number for which the proportion of bouncy numbers is exactly 99%"; " Here is an example of how to find the solution to the given problem in Python:
+```
+import itertools
+
+def compute():
+	count = 0
+	for i in itertools.count(1):
+		s = str(i)
+		t = "".join(sorted(s))
+		if s != t and s[ : : -1] != t:
+			count += 1  # i is bouncy
+		if count * 100 == 99 * i:
+			return str(i)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"Find the 30 term of the sequence in which the number is equal to sum of digits of the number raised to some power(at least two digits)."; " Here is an example of how to find the solution to the given problem in Python:
+```
+def compute():
+	INDEX = 30  # 1-based
+	limit = 1
+	while True:
+		candidates = set()
+		k = 2
+		while (1 << k) < limit:
+			for n in itertools.count(2):
+				pow = n**k
+				if pow >= limit and len(str(pow)) * 9 < n:
+					break
+				if pow >= 10 and is_digit_sum_power(pow):
+					candidates.add(pow)
+			k += 1
+		if len(candidates) >= INDEX:
+			return str(sorted(candidates)[INDEX - 1])
+		limit <<= 8
+
+
+def is_digit_sum_power(x):
+	digitsum = sum(int(c) for c in str(x))
+	if digitsum == 1:  # Powers of 10 are never a power of 1
+		return False
+	pow = digitsum
+	while pow < x:
+		pow *= digitsum
+	return pow == x
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"Find the sum of all the numbers less than 100000000 that are both palindromic and can be written as the sum of consecutive squares."; " Here is an example of how to find the solution to the given problem in Python:
+```
+import itertools
+
+def compute():
+	nums = set()
+	for i in range(1, 10001):
+		sigma = i * i
+		for j in itertools.count(i + 1):
+			sigma += j * j
+			if sigma >= 100000000:
+				break
+			s = str(sigma)
+			if s == s[ : : -1]:  # Is palindrome
+				nums.add(sigma)
+	return str(sum(nums))
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"How many reversible numbers are there below one-billion ?"; " Here is an example of how to find the solution to the given problem in Python:
+```
+def compute():
+	def count_reversibles(numdigits):
+		if numdigits % 2 == 0:
+			return 20 * 30**(numdigits // 2 - 1)
+		elif numdigits % 4 == 3:
+			return 100 * 500**((numdigits - 3) // 4)
+		elif numdigits % 4 == 1:
+			return 0
+		else:
+			raise AssertionError()
+	
+	ans = sum(count_reversibles(d) for d in range(2, 10))
+	return str(ans)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"Find the last five digits before trailing zeros in factorial of 1000000000000"; " Here is an example of how to find the solution to the given problem in Python:
+```
+def compute():
+	ans = factorial_suffix(10**12)
+	return str(ans)
+
+# The last 5 digits of n!, excluding trailing zeros.
+
+def factorial_suffix(n):
+	twos = count_factors(n, 2) - count_factors(n, 5)  # Always non-negative for every n
+	# We can reduce 'twos' because there is a cycle: 2^5 = 2^2505 = 32 mod 100000
+	if twos >= 2505:
+		twos = (twos - 5) % 2500 + 5
+	return factorialish(n) * pow(2, twos, 100000) % 100000
+
+
+# Equal to n! but with all factors of 2 and 5 removed and then modulo 10^5.
+# The identity factorialIsh(n) = odd_factorialish(n) * even_factorialish(n) (mod 10^5) is true by definition.
+
+def factorialish(n):
+	return even_factorialish(n) * odd_factorialish(n) % 100000
+
+
+# The product of {all even numbers from 1 to n}, but with all factors of 2 and 5 removed and then modulo 10^5.
+# For example, even_factorialish(9) only considers the numbers {2, 4, 6, 8}. Divide each number by 2 to get {1, 2, 3, 4}. Thus even_factorialish(9) = factorialish(4).
+
+def even_factorialish(n):
+	if n == 0:
+		return 1
+	else:
+		return factorialish(n // 2)
+
+
+# The product of {all odd numbers from 1 to n}, but with all factors of 2 and 5 removed and then modulo 10^5.
+# By definition, odd_factorialish() never considers any number that has a factor of 2. The product of the numbers that not a multiple of 5 are accumulated by factorial_coprime().
+# Those that are a multiple of 5 are handled recursively by odd_factorialish(), noting that they are still odd after dividing by 5.
+
+def odd_factorialish(n):
+	if n == 0:
+		return 1
+	else:
+		return odd_factorialish(n // 5) * factorial_coprime(n) % 100000
+
+
+# The product of {all numbers from 1 to n that are coprime with 10}, modulo 10^5.
+# The input argument can be taken modulo 10^5 because factorialoid(10^5) = 1, and each block of 10^5 numbers behaves the same.
+
+def factorial_coprime(n):
+	n %= 100000
+	product = 1
+	for i in range(1, n + 1):
+		if i % 2 != 0 and i % 5 != 0:
+			product = i * product % 100000
+	return product
+
+
+# Counts the number of factors of n in the set of integers {1, 2, ..., end}.
+# For example, count_factors(25, 5) = 6 because {5, 10, 15, 20} each has one factor of 5, and 25 has two factors of 5.
+
+def count_factors(end, n):
+	if end == 0:
+		return 0
+	else:
+		return end // n + count_factors(end // n, n)
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"How many hexadecimal numbers containing at most sixteen hexadecimal digits exist with all of the digits 0, 1, and A present at least once?"; " Here is an example of how to find the solution to the given problem in Python:
+```
+def compute():
+	ans = sum((15 * 16**(n-1) - 43 * 15**(n-1) + 41 * 14**(n-1) - 13**n) for n in range(1, 17))
+	return f'{ans:X}'
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;"How many 20 digit numbers n(without any leading zero) exist such that no three consecutive digits of n have a sum greater than 9?"; " Here is an example of how to find the solution to the given problem in Python:
+```
+def compute():
+	BASE = 10
+	DIGITS = 20
+	CONSECUTIVE = 3
+	MAX_SUM = 9
+
+	# Dynamic programming array, with base case (ways for 0-digit numbers)
+	innerlen = BASE ** CONSECUTIVE
+	ways = [[1] + [0] * (innerlen - 1)]
+
+
+	# Compute DP table
+	for digits in range(1, DIGITS + CONSECUTIVE + 1):
+		newrow = []
+		for prefix in range(innerlen):
+			sum = 0
+			if digit_sum(prefix) <= MAX_SUM:
+				for nextdigit in range(BASE):
+					sum += ways[digits - 1][prefix % (BASE ** (CONSECUTIVE - 1)) * BASE + nextdigit]
+			newrow.append(sum)
+		ways.append(newrow)
+
+	ans = ways[-1][0] - ways[-2][0]
+	return str(ans)
+
+def digit_sum(n):
+	return sum(int(c) for c in str(n))
+
+print(compute())
+```
+This code defines a function called `compute` which solves the problem."
+;
