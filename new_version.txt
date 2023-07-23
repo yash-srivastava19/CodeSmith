@@ -1,4 +1,5 @@
-"Find the sum of all the natural numbers below 1000 that are multiples of 3 or 5."; " Here is an example of how to find the solution to the given problem in Python:
+Find the sum of all the natural numbers below 1000 that are multiples of 3 or 5.; 
+Here is an example of how to find the solution to the given problem in Python:
 ```
 def compute():
 	ans = sum(x for x in range(1000) if (x % 3 == 0 or x % 5 == 0))
@@ -6,8 +7,11 @@ def compute():
 
 print(compute())
 ```
-This code defines a function called `compute` which solves the problem."
-;"Find the sum of all the even-valued terms in the Fibonacci sequence which do not exceed one million."; " Here is an example of how to find the solution to the given problem in Python:
+This code defines a function called `compute` which solves the problem.;
+
+Find the sum of all the even-valued terms in the Fibonacci sequence which do not exceed one million.; 
+
+Here is an example of how to find the solution to the given problem in Python:
 ```
 def compute():
 	ans = 0
@@ -21,8 +25,10 @@ def compute():
 
 print(compute)
 ```
-This code defines a function called `compute` which solves the problem."
-;"Find the largest prime factor of 317584931803"; " Here is an example of how to find the solution to the given problem in Python:
+This code defines a function called `compute` which solves the problem.";
+
+Find the largest prime factor of 317584931803; 
+Here is an example of how to find the solution to the given problem in Python:
 ```
 def sqrt(x: int) -> int:
 	assert x >= 0
@@ -56,8 +62,10 @@ def smallest_prime_factor(n):
 
 print(compute())
 ```
-This code defines a function called `compute` which solves the problem."
-;"Find the largest palindrome made from the product of two 3-digit numbers."; " Here is an example of how to find the solution to the given problem in Python:
+This code defines a function called `compute` which solves the problem.;
+
+Find the largest palindrome made from the product of two 3-digit numbers.;
+Here is an example of how to find the solution to the given problem in Python:
 ```
 def compute():
 	ans = max(i * j for i in range(100, 1000) for j in range(100, 1000) if str(i * j) == str(i * j)[ : : -1])
@@ -65,8 +73,10 @@ def compute():
 
 print(compute())
 ```
-This code defines a function called `compute` which solves the problem."
-;"What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?"; " Here is an example of how to find the solution to the given problem in Python:
+This code defines a function called `compute` which solves the problem.;
+
+What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?;
+Here is an example of how to find the solution to the given problem in Python:
 ```
 import math
 
@@ -78,8 +88,10 @@ def compute():
 
 print(compute())
 ```
-This code defines a function called `compute` which solves the problem."
-;"Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum."; " Here is an example of how to find the solution to the given problem in Python:
+This code defines a function called `compute` which solves the problem.;
+
+Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.;
+Here is an example of how to find the solution to the given problem in Python:
 ```
 def compute():
 	N = 100
@@ -89,8 +101,11 @@ def compute():
 
 print(compute())
 ```
-This code defines a function called `compute` which solves the problem."
-;"Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?";  "Here is an example of how to find the solution to the given problem in Python:
+This code defines a function called `compute` which solves the problem.;
+
+Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?; 
+
+Here is an example of how to find the solution to the given problem in Python:
 ```
 NUMBER = '7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450'
 ADJACENT = 13
@@ -107,8 +122,10 @@ def compute():
 
 print(compute())
 ```
-This code defines a function called `compute` which solves the problem."
-;"There exists exactly one Pythagorean triplet for which a+b+c = 1000. Find the product a*b*c"; " Here is an example of how to find the solution to the given problem in Python:
+This code defines a function called `compute` which solves the problem.;
+
+There exists exactly one Pythagorean triplet for which a+b+c = 1000. Find the product a*b*c; 
+Here is an example of how to find the solution to the given problem in Python:
 ```
 def compute():
 	PERIMETER = 1000
@@ -121,8 +138,10 @@ def compute():
 
 print(compute())
 ```
-This code defines a function called `compute` which solves the problem."
-;"What is the sum of the digits of the number 2 to the power 100?"; " Here is an example of how to find the solution to the given problem in Python:
+This code defines a function called `compute` which solves the problem.;
+
+What is the sum of the digits of the number 2 to the power 100?;
+Here is an example of how to find the solution to the given problem in Python:
 ```
 	def compute():
 	n = 2**1000
@@ -131,23 +150,25 @@ This code defines a function called `compute` which solves the problem."
 
 print(compute())
 ```
-This code defines a function called `compute` which solves the problem."
-;"If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, how many letters would be used?"; " Here is an example of how to find the solution to the given problem in Python:
+This code defines a function called `compute` which solves the problem.;
+
+If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, how many letters would be used?;
+Here is an example of how to find the solution to the given problem in Python:
 ```
 ONES = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine','ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
 TENS = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
 
 def to_english(n):
-if 0 <= n < 20:
-	return ONES[n]
-elif 20 <= n < 100:
-	return TENS[n // 10] + (ONES[n % 10] if (n % 10 != 0) else '')
-elif 100 <= n < 1000:
-	return ONES[n // 100] + 'hundred' + (('and' + to_english(n % 100)) if (n % 100 != 0) else '')
-elif 1000 <= n < 1000000:
-	return to_english(n // 1000) + 'thousand' + (to_english(n % 1000) if (n % 1000 != 0) else '')
-else:
-	raise ValueError()
+	if 0 <= n < 20:
+		return ONES[n]
+	elif 20 <= n < 100:
+		return TENS[n // 10] + (ONES[n % 10] if (n % 10 != 0) else '')
+	elif 100 <= n < 1000:
+		return ONES[n // 100] + 'hundred' + (('and' + to_english(n % 100)) if (n % 100 			!= 0) else '')
+	elif 1000 <= n < 1000000:
+		return to_english(n // 1000) + 'thousand' + (to_english(n % 1000) if (n % 1000 			!= 0) else '')
+	else:
+		raise ValueError()
 
 def compute():
 	ans = sum(len(to_english(i)) for i in range(1, 1001))
@@ -155,8 +176,12 @@ def compute():
 
 print(compute())
 ```
+
 This code defines a function called `compute` which solves the problem."
-;"Find the sum of the digits in the number hundred factorial"; " Here is an example of how to find the solution to the given problem in Python:
+;
+
+Find the sum of the digits in the number hundred factorial;
+Here is an example of how to find the solution to the given problem in Python:
 ```
 import math
 
@@ -167,8 +192,10 @@ import math
 
 print(compute())
 ```
-This code defines a function called `compute` which solves the problem."
-;"Evaluate the sum of all the amicable numbers under 10000"; " Here is an example of how to find the solution to the given problem in Python:
+This code defines a function called `compute` which solves the problem.;
+
+Evaluate the sum of all the amicable numbers under 10000;
+Here is an example of how to find the solution to the given problem in Python:
 ```
 def compute():
 	# Compute sum of proper divisors for each number
@@ -186,8 +213,10 @@ def compute():
 
 print(compute())
 ```
-This code defines a function called `compute` which solves the problem."
-;"What is the sum of the numbers on the diagonals in a 1001 by 1001 ulam spiral ?"; " Here is an example of how to find the solution to the given problem in Python:
+This code defines a function called `compute` which solves the problem.;
+
+What is the sum of the numbers on the diagonals in a 1001 by 1001 ulam spiral ?;
+Here is an example of how to find the solution to the given problem in Python:
 ```
 def compute():
 	SIZE = 1001  # Must be odd
@@ -197,8 +226,10 @@ def compute():
 
 print(compute())
 ```
-This code defines a function called `compute` which solves the problem."
-;"Find the sum of all the numbers that can be written as the sum of fifth powers of their digits"; " Here is an example of how to find the solution to the given problem in Python:
+This code defines a function called `compute` which solves the problem.;
+
+Find the sum of all the numbers that can be written as the sum of fifth powers of their digits;
+Here is an example of how to find the solution to the given problem in Python:
 ```
 def compute():
 	# As stated in the problem, 1 = 1^5 is excluded.
@@ -212,7 +243,7 @@ def fifth_power_digit_sum(n):
 
 print(compute())
 ```
-This code defines a function called `compute` which solves the problem."
+This code defines a function called `compute` which solves the problem.
 ;"Find the sum of all numbers which are equal to the sum of the factorial of their digits."; " Here is an example of how to find the solution to the given problem in Python:
 ```
 import math
