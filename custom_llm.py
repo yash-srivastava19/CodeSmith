@@ -1,20 +1,22 @@
-import cohere
-from typing import Any, List, Mapping, Optional
+# Wrap our custom fine-tuned model into a Langchain LLM class, and make it available for chainlit factory.
 
-from langchain.callbacks.manager import CallbackManagerForLLMRun
+import cohere
+from config import COHERE_API_KEY, CODE_GEN_MODEL_ID
 from langchain.llms.base import LLM
 
-co = cohere.Client('vJVaAxPgk9XYSuknSdmJBEtdSzl1uwAVsbizc7b8')  # This is your trial API key
+co = cohere.Client(COHERE_API_KEY)    # This is COHERE_API_KEY
 
 
-class CustomLLM(LLM):
-    model: str = '22dab3fa-06ed-40fa-b779-a86595ebbb92-ft'   # The custom model we used.
+class CodeGenAlpha(LLM):
+    model: str = CODE_GEN_MODEL_ID   # The custom model we used.
+    
     @property
     def _llm_type(self) -> str:
         return "custom"
 
-    def _call(self,prompt: str,stop: Optional[List[str]] = None,run_manager: Optional[CallbackManagerForLLMRun] = None,) -> str:
-        """ This is where the main logic of the """
+    def _call(self,prompt: str,stop = None,run_manager = None,) -> str:
+        """ This is where the main logic of the model we used. Since we used a custom model, we needed to implement it. """
+        
         if stop is not None:
             raise ValueError("stop kwargs are not permitted.")
         response = co.generate(model=self.model, prompt=f'{prompt}')
@@ -22,9 +24,10 @@ class CustomLLM(LLM):
         return response.generations[0].text
 
     @property
-    def _identifying_params(self) -> Mapping[str, Any]:
+    def _identifying_params(self) :
         """Get the identifying parameters."""
-        return {"model_type": f'COHERE_CUSTOM-<{self.model}>'}
+        
+        return {"model_type": f'COHERE_CUSTOM_MODEL_ID-<*****{self.model[-5:-1]}>'}
 
 
-""" Now, this thing can be used as a custom LLM. Use it in the LLM Chain thing."""
+""" Now, this thing can be used as a custom LLM. Use it in the LLM Chain."""
