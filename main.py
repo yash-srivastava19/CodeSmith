@@ -1,18 +1,19 @@
-import os
+# Contains main driver code for the Chainlit to work.
+
 from langchain import PromptTemplate, Cohere, LLMChain
 import chainlit as cl
-from custom_llm import CustomLLM
-os.environ["COHERE_API_KEY"] = "3FZy1Q1sd9Yfs289shdPgwjAt4MEuMxUmQx3oecK"
 
-template = """Question: {question}
+from custom_llm import CodeGenAlpha
+
+template = """You are an AI assistant that aims to help answer the user query. Write the code for the problem - explain where ever possible, and make use of comments 
+{question}
 
 Answer: Let's think step by step."""
-
 
 @cl.langchain_factory(use_async=False)
 def factory():
     prompt = PromptTemplate(template=template, input_variables=["question"])
-    llm_chain = LLMChain(prompt=prompt, llm=CustomLLM(), verbose=True)
+    llm_chain = LLMChain(prompt=prompt, llm=CodeGenAlpha(), verbose=True)
 
     return llm_chain
 
@@ -20,7 +21,7 @@ def factory():
 @cl.langchain_rename   # This will be particularly useful when we want to customize this thing for production.
 def rename(orig_author):
     rename_dict = {
-        'LLMChain': 'Scooby'
+        'LLMChain': 'Scooby'   # Scooby is a great name for the LLM Chain !!
     }
     return rename_dict.get(orig_author, orig_author)
 
