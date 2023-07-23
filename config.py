@@ -1,0 +1,2 @@
+COHERE_API_KEY = "3FZy1Q1sd9Yfs289shdPgwjAt4MEuMxUmQx3oecK"
+CODE_GEN_MODEL_ID = "ab9e016f-f5ee-4ef7-ad3f-b691ab22c386-ft"
