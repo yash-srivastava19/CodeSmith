@@ -1,4 +1,7 @@
 # CodeSmith
+
+![code_smith](https://github.com/yash-srivastava19/CodeSmith/assets/85068689/3b5432b1-d39d-4f97-8821-de5e001a1fbc)
+
 Attention - all programmers. There is a new product in town. Are you currently learning python programming, or preparing for programming competitions but don't have anyone to shoot ideas to? Worry not - I've developed CodeSmith - A ChatGPT inspired Chatbot which can double as a programming assistant. CodeSmith knows a lot about math, statistics, machine learning in Python, and can be a great asset to do programming with. Although the apllication is free and open source, it can handle some requests(not production level). Some advantages : 
 
 - No calling of OpenAI API. Although OpenAI models are quite accurate for code generation, I know it's expensive, and most of us don't have access to it.
