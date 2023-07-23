@@ -1,0 +1,9 @@
+[project]
+# Change the public setting to false to enable authentication
+public = false
+
+# Paste the copied project ID here
+id = "CodeSmith-fMNP0zQy0ptn"
+
+# Where will history be stored?
+database = "cloud"
