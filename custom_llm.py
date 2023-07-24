@@ -1,14 +1,14 @@
 # Wrap our custom fine-tuned model into a Langchain LLM class, and make it available for chainlit factory.
 
 import cohere
-from config import COHERE_API_KEY, CODE_GEN_MODEL_ID
+from config import config
 from langchain.llms.base import LLM
 
-co = cohere.Client(COHERE_API_KEY)    # This is COHERE_API_KEY
+co = cohere.Client(config.COHERE_API_KEY)    # This is COHERE_API_KEY
 
 
 class CodeGenAlpha(LLM):
-    model: str = CODE_GEN_MODEL_ID   # The custom model we used.
+    model: str = config.CODE_GEN_MODEL_ID   # The custom model we used.
     
     @property
     def _llm_type(self) -> str:
@@ -21,7 +21,7 @@ class CodeGenAlpha(LLM):
             raise ValueError("stop kwargs are not permitted.")
         response = co.generate(model=self.model, prompt=f'{prompt}')
 
-        return response.generations[0].text
+        return f" ``` \n {response.generations[0].text} \n ``` "  # Mostly code, so output should be in this form.
 
     @property
     def _identifying_params(self) :
