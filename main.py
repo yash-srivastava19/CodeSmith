@@ -5,10 +5,11 @@ import chainlit as cl
 
 from custom_llm import CodeGenAlpha
 
-template = """You are an AI assistant that aims to help answer the user query. Write the code for the problem - explain where ever possible, and make use of comments 
-{question}
+template = """ Write a code for the following problem :
+{question} 
 
-Answer: Let's think step by step."""
+Code:
+"""
 
 @cl.langchain_factory(use_async=False)
 def factory():
