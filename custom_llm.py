@@ -21,7 +21,7 @@ class CodeGenAlpha(LLM):
             raise ValueError("stop kwargs are not permitted.")
         response = co.generate(model=self.model, prompt=f'{prompt}')
 
-        return f" ``` \n {response.generations[0].text} \n ``` "  # Mostly code, so output should be in this form.
+        return f' ```python \n {response.generations[0].text} \n ``` '  # Mostly code, so output should be in this form.
 
     @property
     def _identifying_params(self) :
